@@ -28,8 +28,7 @@ pipeline {
         stage ("Push to ECR") {
             steps {
                 script {
-                    sh 'aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 477760781329.dkr.ecr.ca-central-1.amazonaws.com
-'
+                    sh 'aws ecr get-login-password --region ca-central-1 | docker login --username AWS --password-stdin 477760781329.dkr.ecr.ca-central-1.amazonaws.com'
                     sh '477760781329.dkr.ecr.ca-central-1.amazonaws.com/firstcloudapp:$BUILD_NUMBER'
                     
                 }
