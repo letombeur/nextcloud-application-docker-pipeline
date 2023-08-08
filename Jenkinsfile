@@ -10,7 +10,7 @@ pipeline {
         registry = "477760781329.dkr.ecr.ca-central-1.amazonaws.com/firstcloudapp"
     }
     stages {
-        stage('Checkout') {
+        stage("Checkout") {
             steps {
                 checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Lion-Technology-Solutions/nextcloud-application-docker-pipeline.git']])
             }
